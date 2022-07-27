@@ -1,0 +1,15 @@
+@import './reset.css';
+
+// 覆盖element默认样式
+body {
+    background: #000839;
+    .el-avatar {
+        background: var(--el-color-primary-light-9);
+        color: var(--el-color-primary-light-5);
+    }
+}
+
+@font-face {
+    font-family: digitFont;
+    src: url('../../font/DS-DIGIT.TTF');
+}

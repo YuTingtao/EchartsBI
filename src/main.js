@@ -10,11 +10,11 @@ import 'virtual:svg-icons-register'
 import ECharts from 'vue-echarts'
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
-import { BarChart, LineChart, PieChart, MapChart } from 'echarts/charts';
+import { BarChart, LineChart, PieChart, MapChart, ScatterChart, EffectScatterChart } from 'echarts/charts';
 import { GridComponent, TooltipComponent, LegendComponent, GeoComponent } from 'echarts/components';
 
 use([
-    CanvasRenderer, BarChart, LineChart, PieChart, MapChart,
+    CanvasRenderer, BarChart, LineChart, PieChart, MapChart, ScatterChart, EffectScatterChart,
     GridComponent, TooltipComponent, LegendComponent, GeoComponent
 ]);
 

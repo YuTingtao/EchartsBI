@@ -1,5 +1,5 @@
 # Vue 3 + Vite
-vue3 + vite + Element-Plus项目模板，支持自定义主题色，动态路由菜单，svg-icon组件，axios拦截
+vue3 + vite + Vue-Echarts
 
 ## 目录结构
 ```

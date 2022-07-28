@@ -31,7 +31,7 @@
                     <div class="map1"></div>
                     <div class="map2"></div>
                     <div class="map3"></div>
-                    <div>rgba(43, 196, 243, 0.42)</div>
+                    <chartMap></chartMap>
                 </div>
             </div>
             <div class="column">
@@ -59,6 +59,7 @@ import chart3 from './components/chart3.vue'
 import chart4 from './components/chart4.vue'
 import chart5 from './components/chart5.vue'
 import chart6 from './components/chart6.vue'
+import chartMap from './components/chartMap.vue'
 
 const router = useRouter()
 const route = useRoute()

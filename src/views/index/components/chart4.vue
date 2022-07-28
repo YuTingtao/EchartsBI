@@ -1,9 +1,9 @@
 <template>
-    <echarts ref="chartRef" :option="option"></echarts>
+    <echarts ref="chartRef" :option="option" autoresize></echarts>
 </template>
 
 <script setup>
-import { ref, reactive, onUnmounted } from 'vue';
+import { ref, reactive } from 'vue';
 
 const chartRef = ref();
 
@@ -34,17 +34,7 @@ const option = ref({
                 show: false,
             },
             axisLabel: {
-                color: '#fff',
-                rich: {
-                    lg: {
-                        backgroundColor: '#339911',
-                        color: '#fff',
-                        borderRadius: 15,
-                        align: 'center',
-                        width: 15,
-                        height: 15,
-                    },
-                },
+                color: 'rgba(255, 255, 255, .9)',
             },
         },
         {
@@ -58,10 +48,7 @@ const option = ref({
                 show: false,
             },
             axisLabel: {
-                textStyle: {
-                    fontSize: 12,
-                    color: '#fff',
-                },
+                color: 'rgba(255, 255, 255, .9)',
             },
         },
     ],
@@ -74,21 +61,17 @@ const option = ref({
             barCategoryGap: 50,
             barWidth: 10,
             itemStyle: {
-                normal: {
-                    barBorderRadius: 20,
-                    color: function(params) {
-                        var num = colors.length;
-                        return colors[params.dataIndex % num];
-                    }
+                borderRadius: 5,
+                color: function (params) {
+                    let len = colors.length;
+                    return colors[params.dataIndex % len];
                 },
             },
             label: {
-                normal: {
-                    show: true,
-                    color: '#fff',
-                    position: 'inside',
-                    formatter: '{c}%',
-                },
+                show: true,
+                color: '#fff',
+                position: 'inside',
+                formatter: '{c}%',
             },
         },
         {
@@ -99,26 +82,13 @@ const option = ref({
             data: [100, 100, 100, 100, 100],
             barWidth: 15,
             itemStyle: {
-                normal: {
-                    color: 'none',
-                    borderColor: '#00c1de',
-                    borderWidth: 2,
-                    barBorderRadius: 16,
-                },
+                color: 'none',
+                borderColor: '#00c1de',
+                borderWidth: 2,
+                borderRadius: 7.5,
             },
         },
     ],
-});
-
-// 重新调整大小
-function handleResize() {
-    if (chartRef.value) {
-        chartRef.value.resize();
-    }
-}
-window.addEventListener('resize', handleResize);
-onUnmounted(() => {
-    window.removeEventListener('resize', handleResize);
 });
 </script>
 

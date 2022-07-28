@@ -1,5 +1,5 @@
 <template>
-    <echarts ref="chartRef" :option="option"></echarts>
+    <echarts ref="chartRef" :option="option" autoresize></echarts>
 </template>
 
 <script setup>
@@ -8,7 +8,7 @@ import { ref, reactive, onUnmounted } from 'vue';
 const chartRef = ref();
 
 const option = ref({
-    color: ['#2f89cf'],
+    color: ['#409eff'],
     grid: {
         left: '0%',
         top: '4%',
@@ -30,10 +30,7 @@ const option = ref({
                 alignWithLabel: true,
             },
             axisLabel: {
-                textStyle: {
-                    color: 'rgba(255,255,255,.6)',
-                    fontSize: 12,
-                },
+                color: 'rgba(255, 255, 255, .6)',
             },
             axisLine: {
                 show: false,
@@ -47,21 +44,18 @@ const option = ref({
                 show: true,
             },
             axisLabel: {
+                color: 'rgba(255, 255, 255, .6)',
                 formatter: '{value}',
-                textStyle: {
-                    color: 'rgba(255,255,255,.6)',
-                    fontSize: 12,
-                },
             },
             axisLine: {
                 show: true,
                 lineStyle: {
-                    color: 'rgba(255,255,255,.1)',
+                    color: 'rgba(255, 255, 255, .1)',
                 },
             },
             splitLine: {
                 lineStyle: {
-                    color: 'rgba(255,255,255,.1)',
+                    color: 'rgba(255, 255, 255, .1)',
                 },
             },
         },
@@ -73,7 +67,7 @@ const option = ref({
             data: [200, 300, 300, 900, 1500, 1200, 600],
             barWidth: '35%',
             itemStyle: {
-                barBorderRadius: 4,
+                borderRadius: 4,
             },
         },
     ],

@@ -64,8 +64,6 @@ import chartMap from './components/chartMap.vue'
 const router = useRouter()
 const route = useRoute()
 const store = useStore()
-
-
 </script>
 
 <style lang="scss" scoped>

@@ -32,12 +32,12 @@
     height: 9.80rem;
     padding: 0.1rem 0.15rem 0.15rem 0.15rem;
     .column{
-        flex: 3;
-        flex-shrink: 0;
+        width: 27.25%;
     }
     .column-middle{
-        flex: 5;
-        margin: 0 0.15rem;
+        box-sizing: border-box;
+        width: 45.5%;
+        padding: 0 0.15rem;
     }
 }
 

@@ -1,5 +1,5 @@
 <template>
-    <echarts ref="chartRef" :option="option" autoresize></echarts>
+    <echarts ref="chartRef" :option="option" autoresize @click="handleClick"></echarts>
 </template>
 
 <script setup>
@@ -14,7 +14,7 @@ registerMap('china', china);
 
 // 生成随机数
 function getRrandom() {
-    return Math.round(Math.random() * 500);
+    return Math.round(Math.random() * 10000);
 }
 
 const data = [
@@ -51,7 +51,7 @@ const option = ref({
     tooltip: {
         formatter: function (params) {
             if (params.seriesType == 'effectScatter') {
-                return params.data.name + ': ' + params.data.value[2] + '万人'
+                return params.data.name + '<br>需求人数: ' + params.data.value[2] + '人'
             }
         },
     },
@@ -119,6 +119,10 @@ const option = ref({
         },
     ],
 });
+
+function handleClick(params) {
+    console.log(params);
+}
 </script>
 
 <style lang="scss" scoped></style>

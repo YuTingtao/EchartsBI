@@ -8,15 +8,16 @@ import SvgIcon from './components/svg-icon/index.vue'
 import 'virtual:svg-icons-register'
 
 import ECharts from 'vue-echarts'
-import { use } from 'echarts/core'
+import { use as EchartsUse } from 'echarts/core';
 import { CanvasRenderer } from 'echarts/renderers'
-import { BarChart, LineChart, PieChart, MapChart, ScatterChart, EffectScatterChart } from 'echarts/charts';
+import { BarChart, LineChart, PieChart, MapChart, EffectScatterChart } from 'echarts/charts';
 import { GridComponent, TooltipComponent, LegendComponent, GeoComponent } from 'echarts/components';
 
-use([
-    CanvasRenderer, BarChart, LineChart, PieChart, MapChart, ScatterChart, EffectScatterChart,
-    GridComponent, TooltipComponent, LegendComponent, GeoComponent
-]);
+EchartsUse([
+    CanvasRenderer,
+    BarChart, LineChart, PieChart, MapChart, EffectScatterChart,
+    GridComponent, TooltipComponent, LegendComponent, GeoComponent,
+])
 
 const app = createApp(App)
 app.use(router)

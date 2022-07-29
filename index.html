@@ -5,7 +5,17 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>可视化展板-ECharts</title>
-    <script src="/js/flexible.js"></script>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEle = doc.documentElement;
+            function setRemUnit() {
+                var width = docEle.clientWidth;
+                width && (docEle.style.fontSize = (width / 19.2) + 'px');
+            };
+            doc.addEventListener('DOMContentLoaded', setRemUnit, false);
+            win.addEventListener('resize', setRemUnit, false);
+        })(document, window);
+    </script>
 </head>
 <body>
     <div id="app"></div>

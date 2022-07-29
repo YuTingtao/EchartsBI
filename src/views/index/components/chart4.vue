@@ -23,7 +23,6 @@ const option = ref({
         {
             show: true,
             data: ['HTML5', 'CSS3', 'JavaScript', 'VUE', 'NODE'],
-            inverse: true,
             axisLine: {
                 show: false,
             },
@@ -39,7 +38,6 @@ const option = ref({
         },
         {
             show: true,
-            inverse: true,
             data: [702, 350, 610, 793, 664],
             axisLine: {
                 show: false,
@@ -80,12 +78,12 @@ const option = ref({
             yAxisIndex: 1,
             barCategoryGap: 50,
             data: [100, 100, 100, 100, 100],
-            barWidth: 15,
+            barWidth: 16,
             itemStyle: {
                 color: 'none',
                 borderColor: '#00c1de',
                 borderWidth: 2,
-                borderRadius: 7.5,
+                borderRadius: 8,
             },
         },
     ],
